@@ -1,5 +1,5 @@
 import NavLink from "./Navlink";
-import { INavLink } from "@/models";
+import { INavLink } from "@/models/INavLink";
 
 export default function Navbar({ links }: { links: INavLink[] }) {
   return (
