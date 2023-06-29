@@ -12,13 +12,15 @@ export default function Home() {
 
       <TypeAnimation
         sequence={[
-          "Hello, I'm Shawn!",
-          1000,
-          "I'm a software developer in frontend and backend development for web apps.",
-          1000,
-          "I enjoy learning about new web technologies.",
-          1000,
-          "Want to know how I may help your project? Check out my project portfolio and online resume.",
+          "Hello!",
+          500,
+          "I'm a software developer in frontend and backend development for web apps...",
+          500,
+          "I enjoy learning about new web technologies...",
+          500,
+          "Check out my project portfolio and profile page for more information about me...",
+          500,
+          "Find my contact information in the Contact page...",
         ]}
         cursor={true}
         repeat={Infinity}
