@@ -1,12 +1,21 @@
-import NavLink from "./Navlink";
-import { INavLink } from "@/models/INavLink";
+import Link from "next/link";
 
-export default function Navbar({ links }: { links: INavLink[] }) {
+const links = [
+  { label: "Home", link: "/" },
+  { label: "Contact", link: "/contact" },
+  { label: "Projects", link: "/projects" },
+];
+
+export default function Navbar() {
   return (
-    <aside>
+    <nav className="ml-40 mt-40">
       {links.map((item, index) => (
-        <NavLink key={index} link={item.link} label={item.label} />
+        <Link href={item.link} key={index}>
+          <span className="mr-4 px-2 py-1 text-xl text-gray-500 hover:text-white hover:underline hover:underline-offset-8">
+            {item.label}
+          </span>
+        </Link>
       ))}
-    </aside>
+    </nav>
   );
 }

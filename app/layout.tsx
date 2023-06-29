@@ -1,5 +1,11 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Inconsolata } from "next/font/google";
+
+const inconsolata = Inconsolata({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Shawn Birring",
@@ -11,17 +17,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const links = [
-    { label: "Home", link: "/" },
-    { label: "About", link: "/about" },
-    { label: "Contact", link: "/contact" },
-    { label: "Projects", link: "/projects" },
-  ];
   return (
     <html lang="en">
-      <body>
-        <Navbar links={links} />
-        {children}
+      <body className=" bg-black text-white">
+        <main className={inconsolata.className}>
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
