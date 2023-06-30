@@ -78,16 +78,18 @@ export default function Projects() {
       <h1 className="text-6xl font-bold">Projects</h1>
       {projects.map((project, index) => (
         <div
-          className="m-4 flex w-1/2 items-center justify-center rounded bg-gray-800 p-4 transition-transform duration-200 ease-in-out hover:scale-105 lg:m-4 lg:w-full"
+          className="m-4 w-1/2 items-center justify-center rounded bg-gray-800 p-8 transition-transform duration-200 ease-in-out hover:scale-105"
           key={index}
         >
           <div className="flex flex-col items-center justify-center">
             <Image
-              className="rounded-lg"
+              className="rounded-full"
               src={project.image}
               alt={project.name}
               width={100}
               height={100}
+              quality={100}
+              priority={true}
             />
             <h2 className="mt-4 text-2xl font-bold">{project.name}</h2>
             <p className="text-lg text-gray-600">{project.description}</p>
