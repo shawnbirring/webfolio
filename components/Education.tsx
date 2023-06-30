@@ -6,12 +6,12 @@ export default function Education() {
     {
       title: "Computer Systems Technology",
       school: "British Columbia Institute of Technology",
-      date: "September 2021 - Present",
+      date: "September 2022 - Present",
       content: [
         "Object-oriented and Procedural programming",
         "Relational databases",
         "Front and back end web development",
-        "Group software projects",
+        "Group software projects with Agile Development",
         "Data structures & algorithms",
       ],
     },
