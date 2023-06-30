@@ -3,7 +3,7 @@ import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import DownloadResume from "@/components/DownloadResume";
 
-export default function Resume() {
+export default function Profile() {
   return (
     <>
       <DownloadResume />

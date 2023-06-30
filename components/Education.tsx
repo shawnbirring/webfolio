@@ -10,8 +10,11 @@ export default function Education() {
       content: [
         "Object-oriented and Procedural programming",
         "Relational databases",
-        "Web development",
+        "Front and back end web development",
         "Group software projects",
+        "Agile Development",
+        "Data structures & algorithms",
+        "GPA: Term 1: 84% | Term 2: 85%",
       ],
     },
   ];
