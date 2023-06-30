@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { TypeAnimation } from "react-type-animation";
+import DownloadResume from "./DownloadResume";
 
 const links = [
   { label: "Home", link: "/" },
@@ -38,6 +39,17 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          {path === "/profile" && (
+            <li>
+              <a
+                href="/resume.pdf"
+                download
+                className="rounded bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-600 bg-clip-text py-1 pr-2 text-xl font-bold text-transparent"
+              >
+                Download Resume
+              </a>
+            </li>
+          )}
         </ul>
       </nav>
     </div>
