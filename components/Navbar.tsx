@@ -14,7 +14,7 @@ export default function Navbar() {
   const path = usePathname();
 
   return (
-    <div className="ml-5 mt-4 lg:ml-20 lg:mt-20">
+    <div className="ml-5 mt-2 lg:ml-20 lg:mt-20">
       <TypeAnimation
         sequence={["Shawn Birring", 1000]}
         cursor={true}
