@@ -39,7 +39,7 @@ export default function Navbar() {
             </li>
           ))}
           {path === "/profile" && (
-            <li>
+            <li className="sm:mt-2">
               <a
                 href="/resume.pdf"
                 download
