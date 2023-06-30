@@ -1,4 +1,5 @@
 import "./globals.css";
+import "../styles/backgroundAnimation.css";
 import Navbar from "@/components/Navbar";
 import { Inconsolata } from "next/font/google";
 
@@ -19,11 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=" bg-gray-900 text-white">
-        <main className={inconsolata.className}>
+      <body>
+        <div className={inconsolata.className}>
           <Navbar />
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );
