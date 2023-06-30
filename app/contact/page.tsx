@@ -2,11 +2,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
+  const constraintsRef = useRef(null);
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="mx-5 mt-6 flex transform flex-col items-center justify-center rounded bg-gray-800 px-10 py-8 transition-transform duration-200 ease-in-out hover:scale-105 lg:m-10 lg:p-14">
+    <motion.div
+      ref={constraintsRef}
+      className="flex flex-col items-center justify-center"
+    >
+      <motion.div
+        drag
+        dragConstraints={constraintsRef}
+        className="mx-5 mt-6 flex transform flex-col items-center justify-center rounded bg-gray-800 px-10 py-8 transition-transform duration-200 ease-in-out hover:scale-105 lg:m-10 lg:p-14"
+      >
         <Image
           src="/FaceShot.png"
           alt="Profile picture"
@@ -69,7 +79,7 @@ export default function Contact() {
             </Link>
           </p>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
