@@ -9,7 +9,7 @@ export default function Skills() {
     {
       title: "Tools",
       content:
-        "AJAX, Node.js, Git and GitHub, NextJS, NextAuth, Prisma, Vercel, OpenAI API",
+        "AJAX, Axios, Node.js, Git and GitHub, NextJS, NextAuth, Prisma, Vercel, OpenAI API",
     },
     {
       title: "Database",

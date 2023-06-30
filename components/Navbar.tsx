@@ -30,7 +30,7 @@ export default function Navbar() {
                 href={item.link}
                 className={`py-1 pr-2 text-xl ${
                   path === item.link
-                    ? "text-white underline underline-offset-8"
+                    ? "underline underline-offset-8"
                     : "text-gray-500 hover:text-white hover:underline hover:underline-offset-8"
                 }`}
               >
