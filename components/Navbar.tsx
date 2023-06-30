@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 const links = [
   { label: "Home", link: "/" },
@@ -39,7 +40,12 @@ export default function Navbar() {
             </li>
           ))}
           {path === "/profile" && (
-            <li>
+            <motion.li
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 1 }}
+            >
               <a
                 href="/resume.pdf"
                 download
@@ -47,7 +53,7 @@ export default function Navbar() {
               >
                 Download Resume
               </a>
-            </li>
+            </motion.li>
           )}
         </ul>
       </nav>
