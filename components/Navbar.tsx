@@ -39,11 +39,11 @@ export default function Navbar() {
             </li>
           ))}
           {path === "/profile" && (
-            <li className="sm:mt-2">
+            <li>
               <a
                 href="/resume.pdf"
                 download
-                className="rounded bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-600 bg-clip-text py-1 text-xl font-bold text-transparent"
+                className="rounded bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-600 bg-clip-text text-xl font-bold text-transparent"
               >
                 Download Resume
               </a>
