@@ -28,10 +28,10 @@ export default function Navbar() {
             <li key={index}>
               <Link
                 href={item.link}
-                className={`py-1 pr-2 text-xl ${
+                className={`py-1 pr-2 text-xl text-white ${
                   path === item.link
-                    ? "text-white underline underline-offset-8"
-                    : "text-gray-500 hover:text-white hover:underline hover:underline-offset-8"
+                    ? "underline underline-offset-8"
+                    : "hover:underline hover:underline-offset-8"
                 }`}
               >
                 {item.label}
