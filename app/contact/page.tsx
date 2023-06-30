@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="m-10 flex transform flex-col items-center justify-center rounded bg-gray-800 px-8 py-14 transition-transform duration-200 ease-in-out hover:scale-105">
+      <div className="m-10 flex transform flex-col items-center justify-center rounded bg-gray-800 px-12 py-14 transition-transform duration-200 ease-in-out hover:scale-105">
         <Image
           src="/FaceShot.png"
           alt="Profile picture"
@@ -21,7 +21,7 @@ export default function Contact() {
             📞 <strong>Phone:</strong> 236-380-2753
           </p>
           <p>
-            📧 <strong>School Email:</strong>{" "}
+            📧 <strong>School Email:</strong> <br />
             <Link
               href="mailto:sbirring4@my.bcit.ca"
               className="text-blue-500 underline"
@@ -30,7 +30,7 @@ export default function Contact() {
             </Link>
           </p>
           <p>
-            📧 <strong>Personal Email:</strong>{" "}
+            📧 <strong>Personal Email:</strong> <br />
             <Link
               href="mailto:shawnbirring21@gmail.com"
               className="text-blue-500 underline"
