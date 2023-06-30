@@ -4,7 +4,8 @@ export default function Skills() {
   const skills = [
     {
       title: "Languages",
-      content: "Java, JavaScript, Typescript, C, Python, HTML, CSS, SQL, React",
+      content:
+        "Java, JavaScript, Typescript, C, Python, HTML, CSS, SQL, React, EJS",
     },
     {
       title: "Tools",
