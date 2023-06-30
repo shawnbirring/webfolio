@@ -1,5 +1,6 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 export default function Experience() {
   const experiences = [
     {
@@ -49,9 +50,11 @@ export default function Experience() {
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Experience</h2>
         {experiences.map((item, index) => (
-          <div
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
             key={index}
-            className="transform rounded bg-gray-800 p-4 transition-transform duration-200 ease-in-out hover:scale-105"
+            className="transform rounded bg-gray-800 p-4"
           >
             <h2 className="mb-3 text-2xl font-semibold">{item.role}</h2>
             <h3 className="text-xl">{item.company}</h3>
@@ -67,7 +70,7 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

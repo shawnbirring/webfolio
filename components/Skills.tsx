@@ -1,5 +1,6 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 export default function Skills() {
   const skills = [
     {
@@ -30,9 +31,11 @@ export default function Skills() {
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Skills</h2>
         {skills.map((item, index) => (
-          <div
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
             key={index}
-            className="transform rounded bg-gray-800 p-4 transition-transform duration-200 ease-in-out hover:scale-105"
+            className="transform rounded bg-gray-800 p-4"
           >
             <h2 className="mb-3 text-2xl font-semibold">{item.title}</h2>
             <TypeAnimation
@@ -40,7 +43,7 @@ export default function Skills() {
               cursor={false}
               repeat={Infinity}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
