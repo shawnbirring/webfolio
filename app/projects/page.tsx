@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
+import { TypeAnimation } from "react-type-animation";
 export default function Projects() {
   const projects = [
     {
       name: "IntelliPaws",
       description:
-        "A web application that allows users to upload images of their pets and get a prediction of the breed of the pet.",
+        "A web application that uses AI to reccomend a dog breed based on your lifestyle and provide customized trainining lessons.",
       technologies:
         "OpenAI API, TypeScript, NextJS, ReactJS, NextAuth, Prisma, Mantine, Material UI",
       image: "/IntelliPaws.png",
@@ -22,7 +24,7 @@ export default function Projects() {
     {
       name: "Project Buddy",
       description:
-        "A web application that allows users to create projects and tasks and assign them to other users.",
+        'A web application that allows users to kickstart their projects with guidance from a dedicated "project buddy".',
       technologies:
         "TypeScript, NextJS, ReactJS, Supabase, Axios, NextAuth, Mantine, Material UI",
       image: "/ProjectBuddy.png",
@@ -40,8 +42,8 @@ export default function Projects() {
     {
       name: "CVSS",
       description:
-        "A web application that allows users to create a resume and export it as a PDF.",
-      technologies: "TypeScript, NextJS, ReactJS, TailWind CSS",
+        "A personal hair dresser's website, users can inquire for more information, book appointments and make payments.",
+      technologies: "TypeScript, NextJS, ReactJS, TailWind CSS, Stripe",
       image: "/CVSS.png",
       links: [
         {
@@ -55,9 +57,22 @@ export default function Projects() {
       ],
     },
     {
+      name: "Jayden Jump",
+      description:
+        "A platform game where users can compete for the highscore while collecting powerups and defeating enemies.",
+      technologies: "Java, PApplet, MongoDB",
+      image: "/JaydenJump.png",
+      links: [
+        {
+          label: "GitHub",
+          link: "https://github.com/ShawnBirring/jaydenjump",
+        },
+      ],
+    },
+    {
       name: "ONI",
       description:
-        "A web application that allows users to create a resume and export it as a PDF.",
+        "A web application that helps users with a sedentary lifestyle find exercices to help out with sore body parts.",
       technologies: "Firebase, VanillaJS, Bootstrap",
       image: "/ONI.png",
       links: [
@@ -75,13 +90,13 @@ export default function Projects() {
 
   return (
     <div className="mt-2 flex min-h-screen flex-col items-center justify-center">
-      <h1 className="text-6xl font-bold">Projects</h1>
+      <h1 className="mb-2 text-6xl">Projects</h1>
       {projects.map((project, index) => (
         <div
-          className="m-4 w-1/2 items-center justify-center rounded bg-gray-800 p-8 transition-transform duration-200 ease-in-out hover:scale-105"
+          className="m-4 w-1/2 rounded bg-gray-800 p-8 transition-transform duration-200 ease-in-out hover:scale-105"
           key={index}
         >
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col ">
             <Image
               className="rounded-full"
               src={project.image}
@@ -92,23 +107,25 @@ export default function Projects() {
               priority={true}
             />
             <h2 className="mt-4 text-2xl font-bold">{project.name}</h2>
-            <p className="text-lg text-gray-600">{project.description}</p>
-            <p className="mt-4 text-lg text-gray-600">
-              <span className="font-bold">Technologies Used:</span>
-              <br />
-              {project.technologies}
-            </p>
-            <div className="mt-4 flex flex-wrap justify-center">
-              {project.links.map((link, index) => (
-                <a
-                  className="mr-4 text-lg underline underline-offset-4 hover:text-purple-800"
-                  href={link.link}
-                  key={index}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
+          </div>
+          <p className="text-lg text-gray-600">
+            <TypeAnimation sequence={[project.description]} cursor={false} />
+          </p>
+          <p className="mt-4 text-lg text-gray-600">
+            <span className="font-bold">Technologies Used:</span>
+            <br />
+            <TypeAnimation sequence={[project.technologies]} cursor={false} />
+          </p>
+          <div className="mt-4 flex flex-wrap ">
+            {project.links.map((link, index) => (
+              <a
+                className="mr-4 text-lg underline underline-offset-4 hover:text-purple-600"
+                href={link.link}
+                key={index}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       ))}

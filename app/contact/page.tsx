@@ -28,7 +28,7 @@ export default function Contact() {
             📧 <strong>School Email:</strong> <br />
             <Link
               href="mailto:sbirring4@my.bcit.ca"
-              className="underline hover:text-blue-500"
+              className="underline hover:text-purple-600"
             >
               sbirring4@my.bcit.ca
             </Link>
@@ -37,7 +37,7 @@ export default function Contact() {
             📧 <strong>Personal Email:</strong> <br />
             <Link
               href="mailto:shawnbirring21@gmail.com"
-              className="underline hover:text-blue-500"
+              className="underline hover:text-purple-600"
             >
               shawnbirring21@gmail.com
             </Link>
@@ -47,7 +47,7 @@ export default function Contact() {
             <Link
               href="https://github.com/shawnbirring"
               target="_blank"
-              className="mr-2 underline hover:text-blue-500"
+              className="mr-2 underline hover:text-purple-600"
             >
               Github
             </Link>
@@ -55,7 +55,7 @@ export default function Contact() {
             <Link
               href="https://linkedin.com/in/shawnbirring"
               target="_blank"
-              className="underline hover:text-blue-500"
+              className="underline hover:text-purple-600"
             >
               LinkedIn
             </Link>
