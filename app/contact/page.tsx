@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="m-10 flex transform flex-col items-center justify-center rounded bg-gray-800 px-12 py-14 transition-transform duration-200 ease-in-out hover:scale-105">
+      <div className="mx-5 mt-6 flex transform flex-col items-center justify-center rounded bg-gray-800 px-12 py-14 transition-transform duration-200 ease-in-out hover:scale-105 lg:m-10">
         <Image
           src="/FaceShot.png"
           alt="Profile picture"
