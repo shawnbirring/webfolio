@@ -15,10 +15,12 @@ export default function Contact() {
         <div className="space-y-4 pt-5 text-center text-xl">
           <h2 className="mb-2 text-2xl font-bold">Contact Me 👋</h2>
           <p>
-            <strong>Location:</strong> Surrey, BC 🍁
+            <strong>Location:</strong> <br />
+            Surrey, BC 🍁
           </p>
           <p>
-            📞 <strong>Phone:</strong> 236-380-2753
+            📞 <strong>Phone:</strong> <br />
+            236-380-2753
           </p>
           <p>
             📧 <strong>School Email:</strong> <br />
