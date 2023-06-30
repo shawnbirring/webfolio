@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Contact() {
   return (
@@ -18,11 +20,11 @@ export default function Contact() {
           <h2 className="mb-2 text-2xl font-bold">Contact Me 👋</h2>
           <p>
             <strong>Location:</strong> <br />
-            Surrey, BC 🍁
+            <TypeAnimation sequence={["Surrey BC 🍁"]} cursor={false} />
           </p>
           <p>
             📞 <strong>Phone:</strong> <br />
-            236-380-2753
+            <TypeAnimation sequence={["236-380-2753"]} cursor={false} />
           </p>
           <p>
             📧 <strong>School Email:</strong> <br />
@@ -30,7 +32,10 @@ export default function Contact() {
               href="mailto:sbirring4@my.bcit.ca"
               className="underline hover:text-purple-600"
             >
-              sbirring4@my.bcit.ca
+              <TypeAnimation
+                sequence={["sbirring4@my.bcit.ca"]}
+                cursor={false}
+              />
             </Link>
           </p>
           <p>
@@ -39,7 +44,10 @@ export default function Contact() {
               href="mailto:shawnbirring21@gmail.com"
               className="underline hover:text-purple-600"
             >
-              shawnbirring21@gmail.com
+              <TypeAnimation
+                sequence={["shawnbirring21@gmail.com"]}
+                cursor={false}
+              />
             </Link>
           </p>
           <p className="m-2 flex justify-center">
