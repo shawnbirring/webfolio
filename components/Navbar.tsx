@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { TypeAnimation } from "react-type-animation";
-import DownloadResume from "./DownloadResume";
 
 const links = [
   { label: "Home", link: "/" },
