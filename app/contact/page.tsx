@@ -10,6 +10,8 @@ export default function Contact() {
           alt="Profile picture"
           width={100}
           height={100}
+          quality={100}
+          priority={true}
           className="rounded-full"
         />
         <div className="space-y-4 pt-5 text-center text-xl">
