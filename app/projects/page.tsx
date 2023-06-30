@@ -93,7 +93,7 @@ export default function Projects() {
       <h1 className="mb-2 text-6xl">Projects</h1>
       {projects.map((project, index) => (
         <div
-          className="m-4 w-1/2 rounded bg-gray-800 p-8 transition-transform duration-200 ease-in-out hover:scale-105"
+          className="m-4 w-4/5 rounded bg-gray-800 p-8 transition-transform duration-200 ease-in-out hover:scale-105 lg:w-1/2"
           key={index}
         >
           <div className="flex flex-col ">
