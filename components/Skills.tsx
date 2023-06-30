@@ -4,19 +4,24 @@ export default function Skills() {
   const skills = [
     {
       title: "Languages",
-      content: "Java, JavaScript, C, Python, HTML, CSS, SQL",
+      content: "Java, JavaScript, Typescript, C, Python, HTML, CSS, SQL, React",
     },
     {
       title: "Tools",
-      content: "AJAX, Node.js, Firebase, jQuery, Bootstrap, Git and GitHub",
+      content:
+        "AJAX, Node.js, Git and GitHub, NextJS, NextAuth, Prisma, Vercel, OpenAI API",
     },
     {
       title: "Database",
-      content: "Firestore, MySQL",
+      content: "Firestore, MySQL, MongoDB, Supabase, PostgreSQL",
     },
     {
       title: "Workflow",
-      content: "Agile Development, Trello, Figma",
+      content: "Agile Development, Trello, Figma, GitFlow Workflow",
+    },
+    {
+      title: "UI Libraries",
+      content: "Bootstrap, TailwindCSS, Material UI, Mantine",
     },
   ];
 
