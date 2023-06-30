@@ -29,6 +29,7 @@ export default function Home() {
         cursor={true}
         repeat={Infinity}
         wrapper="p"
+        className="text-center text-xl"
       />
     </div>
   );
