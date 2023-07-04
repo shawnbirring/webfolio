@@ -1,6 +1,7 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import { Inconsolata } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import Navbar from "@/components/Navbar";
 import PageContent from "@/components/PageContent";
 
 const inconsolata = Inconsolata({
@@ -25,6 +26,7 @@ export default function RootLayout({
           <Navbar />
           <PageContent>{children}</PageContent>
         </div>
+        <Analytics />
       </body>
     </html>
   );
