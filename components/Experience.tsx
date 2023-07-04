@@ -1,6 +1,6 @@
-"use client";
-import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
+import TypeAnimation from "@/components/TypingAnimation";
+import MotionDiv from "./MotionDiv";
+
 export default function Experience() {
   const experiences = [
     {
@@ -50,7 +50,7 @@ export default function Experience() {
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Experience</h2>
         {experiences.map((item, index) => (
-          <motion.div
+          <MotionDiv
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5 }}
             key={index}
@@ -70,7 +70,7 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </MotionDiv>
         ))}
       </div>
     </div>

@@ -1,6 +1,5 @@
-"use client";
-import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
+import TypeAnimation from "@/components/TypingAnimation";
+import MotionDiv from "@/components/MotionDiv";
 
 export default function Education() {
   const education = [
@@ -22,7 +21,7 @@ export default function Education() {
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Education</h2>
         {education.map((item, index) => (
-          <motion.div
+          <MotionDiv
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5 }}
             key={index}
@@ -42,7 +41,7 @@ export default function Education() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </MotionDiv>
         ))}
       </div>
     </div>

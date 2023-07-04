@@ -1,6 +1,5 @@
-"use client";
 import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
+import TypeAnimation from "@/components/TypingAnimation";
 export default function Projects() {
   const projects = [
     {

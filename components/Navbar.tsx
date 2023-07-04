@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TypeAnimation } from "react-type-animation";
+import TypeAnimation from "@/components/TypingAnimation";
 import { motion } from "framer-motion";
 
 const links = [

@@ -1,5 +1,4 @@
-"use client";
-import { TypeAnimation } from "react-type-animation";
+import TypeAnimation from "@/components/TypingAnimation";
 
 export default function Home() {
   return (

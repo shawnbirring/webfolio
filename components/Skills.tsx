@@ -1,6 +1,5 @@
-"use client";
-import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
+import TypeAnimation from "@/components/TypingAnimation";
+import MotionDiv from "./MotionDiv";
 export default function Skills() {
   const skills = [
     {
@@ -31,7 +30,7 @@ export default function Skills() {
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Skills</h2>
         {skills.map((item, index) => (
-          <motion.div
+          <MotionDiv
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5 }}
             key={index}
@@ -43,7 +42,7 @@ export default function Skills() {
               cursor={false}
               repeat={Infinity}
             />
-          </motion.div>
+          </MotionDiv>
         ))}
       </div>
     </div>
