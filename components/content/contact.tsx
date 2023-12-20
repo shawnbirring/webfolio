@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="inline-block text-white">
       <div
-        className="mx-5 mt-6 flex  flex-col items-center justify-center rounded bg-gray-800 px-10 py-8 lg:m-10 lg:p-14"
+        className="mx-5 mt-6 flex  flex-col items-center justify-center rounded px-10 py-8 lg:m-10 lg:p-14"
         // mx-5 mt-6 flex transform flex-col items-center justify-center rounded bg-gray-800 px-10 py-8 transition-transform duration-200 ease-in-out hover:scale-105 lg:m-10 lg:p-14
       >
         <Image

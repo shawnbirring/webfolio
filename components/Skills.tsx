@@ -24,17 +24,12 @@ export default function Skills() {
   ];
 
   return (
-    <div className="flex p-5">
+    <div className="flex">
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Skills</h2>
         {skills.map((item, index) => (
-          <div key={index} className="transform rounded bg-gray-800 p-4">
+          <div key={index} className="transform rounded p-4">
             <h2 className="mb-3 text-2xl font-semibold">{item.title}</h2>
-            {/* <TypeAnimation
-              sequence={[item.content, 1000]}
-              cursor={false}
-              repeat={Infinity}
-            /> */}
             {item.content}
           </div>
         ))}

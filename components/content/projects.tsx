@@ -1,5 +1,4 @@
 import Image from "next/image";
-import TypeAnimation from "@/components/TypingAnimation";
 export default function Projects() {
   const projects = [
     {
@@ -88,11 +87,11 @@ export default function Projects() {
   ];
 
   return (
-    <div className="mt-2 flex min-h-screen flex-col">
-      <h1 className="mb-2 text-6xl">Projects</h1>
+    <div className="flex min-h-screen flex-col">
+      <h1 className="ml-4 mb-2 text-4xl underline">Projects</h1>
       {projects.map((project, index) => (
         <div
-          className="m-4 w-4/5 rounded bg-gray-800 p-8 lg:w-1/2"
+          className="m-4 w-4/5 rounded p-8 lg:w-1/2"
           // className="m-4 w-4/5 rounded bg-gray-800 p-8 transition-transform duration-200 ease-in-out hover:scale-105 lg:w-1/2"
           key={index}
         >
@@ -108,11 +107,11 @@ export default function Projects() {
             />
             <h2 className="mt-4 text-2xl font-bold">{project.name}</h2>
           </div>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg">
             {project.description}
             {/* <TypeAnimation sequence={[project.description]} cursor={false} /> */}
           </p>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg ">
             <span className="font-bold">Technologies Used:</span>
             <br />
             {project.technologies}
@@ -121,7 +120,7 @@ export default function Projects() {
           <div className="mt-4 flex flex-wrap ">
             {project.links.map((link, index) => (
               <a
-                className="mr-4 text-lg underline underline-offset-4 hover:text-purple-600"
+                className="mr-4 text-lg underline underline-offset-4 hover:text-purple-400"
                 href={link.link}
                 key={index}
               >

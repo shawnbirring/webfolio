@@ -47,7 +47,7 @@ export default function Experience() {
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Experience</h2>
         {experiences.map((item, index) => (
-          <div key={index} className="transform rounded bg-gray-800 p-4">
+          <div key={index} className="transform rounded p-4">
             <h2 className="mb-3 text-2xl font-semibold">{item.role}</h2>
             <h3 className="text-xl">{item.company}</h3>
             <h3 className="text-xl">{item.date}</h3>
