@@ -18,7 +18,7 @@ export default function Education() {
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Education</h2>
         {education.map((item, index) => (
-          <div className="transform rounded bg-gray-800 p-4">
+          <div className="transform rounded bg-gray-800 p-4" key={index}>
             <h2 className="mb-3 text-2xl font-semibold">{item.title}</h2>
             <h3 className="text-xl">{item.school}</h3>
             <h3 className="text-xl">{item.date}</h3>
