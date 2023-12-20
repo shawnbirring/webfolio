@@ -24,7 +24,7 @@ export default function ParticleBackground() {
     const particles = new THREE.BufferGeometry();
     const particleMaterial = new THREE.PointsMaterial({
       color: 0xffffff,
-      size: 0.01,
+      size: 0.02,
       map: new THREE.TextureLoader().load("/circle.png"),
       transparent: true,
       blending: THREE.AdditiveBlending,
@@ -45,8 +45,8 @@ export default function ParticleBackground() {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // particleSystem.rotation.x -= 0.001;
-      particleSystem.rotation.y -= 0.0005;
+      particleSystem.rotation.x += 0.0005;
+      particleSystem.rotation.y += 0.0005;
 
       renderer.render(scene, camera);
     };
