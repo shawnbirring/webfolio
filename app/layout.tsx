@@ -2,7 +2,7 @@ import "./globals.css";
 import { Inconsolata } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "@/components/Navbar";
-import PageContent from "@/components/PageContent";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const inconsolata = Inconsolata({
   weight: "400",
@@ -21,11 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-900">
-        <div className={`text-white ${inconsolata.className}`}>
-          <Navbar />
-          <PageContent>{children}</PageContent>
-        </div>
+      {/* <body className="bg-gray-900"> */}
+      <body className="relative text-white">
+        <ParticleBackground />
+        <Navbar />
+        <div className="relative z-10">{children}</div>
         <Analytics />
       </body>
     </html>

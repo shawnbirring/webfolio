@@ -1,5 +1,4 @@
 "use client";
-import MotionDiv from "./MotionDiv";
 import { usePathname } from "next/navigation";
 export default function PageContent({
   children,

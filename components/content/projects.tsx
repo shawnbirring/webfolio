@@ -88,11 +88,12 @@ export default function Projects() {
   ];
 
   return (
-    <div className="mt-2 flex min-h-screen flex-col items-center justify-center">
+    <div className="mt-2 flex min-h-screen flex-col">
       <h1 className="mb-2 text-6xl">Projects</h1>
       {projects.map((project, index) => (
         <div
-          className="m-4 w-4/5 rounded bg-gray-800 p-8 transition-transform duration-200 ease-in-out hover:scale-105 lg:w-1/2"
+          className="m-4 w-4/5 rounded bg-gray-800 p-8 lg:w-1/2"
+          // className="m-4 w-4/5 rounded bg-gray-800 p-8 transition-transform duration-200 ease-in-out hover:scale-105 lg:w-1/2"
           key={index}
         >
           <div className="flex flex-col ">
@@ -108,12 +109,14 @@ export default function Projects() {
             <h2 className="mt-4 text-2xl font-bold">{project.name}</h2>
           </div>
           <p className="text-lg text-gray-600">
-            <TypeAnimation sequence={[project.description]} cursor={false} />
+            {project.description}
+            {/* <TypeAnimation sequence={[project.description]} cursor={false} /> */}
           </p>
           <p className="mt-4 text-lg text-gray-600">
             <span className="font-bold">Technologies Used:</span>
             <br />
-            <TypeAnimation sequence={[project.technologies]} cursor={false} />
+            {project.technologies}
+            {/* <TypeAnimation sequence={[project.technologies]} cursor={false} /> */}
           </p>
           <div className="mt-4 flex flex-wrap ">
             {project.links.map((link, index) => (

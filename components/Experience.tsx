@@ -1,6 +1,3 @@
-import TypeAnimation from "@/components/TypingAnimation";
-import MotionDiv from "./MotionDiv";
-
 export default function Experience() {
   const experiences = [
     {
@@ -50,27 +47,16 @@ export default function Experience() {
       <div className="flex-1 space-y-5">
         <h2 className="text-2xl">Experience</h2>
         {experiences.map((item, index) => (
-          <MotionDiv
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.5 }}
-            key={index}
-            className="transform rounded bg-gray-800 p-4"
-          >
+          <div key={index} className="transform rounded bg-gray-800 p-4">
             <h2 className="mb-3 text-2xl font-semibold">{item.role}</h2>
             <h3 className="text-xl">{item.company}</h3>
             <h3 className="text-xl">{item.date}</h3>
             <ul className="list-disc pl-4">
               {item.content.map((contentItem, contentIndex) => (
-                <li key={contentIndex}>
-                  <TypeAnimation
-                    sequence={[contentItem, 1000]}
-                    cursor={false}
-                    repeat={Infinity}
-                  />
-                </li>
+                <li key={contentIndex}>{contentItem}</li>
               ))}
             </ul>
-          </MotionDiv>
+          </div>
         ))}
       </div>
     </div>

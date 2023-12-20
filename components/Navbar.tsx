@@ -1,14 +1,12 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import TypeAnimation from "@/components/TypingAnimation";
-import { motion } from "framer-motion";
 
 const links = [
   { label: "Home", link: "/" },
-  { label: "Contact", link: "/contact" },
-  { label: "Projects", link: "/projects" },
-  { label: "Profile", link: "/profile" },
+  { label: "Contact", link: "/" },
+  { label: "Projects", link: "/" },
+  { label: "Profile", link: "/" },
 ];
 
 export default function Navbar() {
@@ -16,13 +14,6 @@ export default function Navbar() {
 
   return (
     <div className="ml-5 mt-2 lg:ml-20 lg:mt-20">
-      <TypeAnimation
-        sequence={["Shawn Birring", 2000]}
-        cursor={true}
-        repeat={Infinity}
-        wrapper="h1"
-        className="mb-2 bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-600 bg-clip-text text-5xl font-bold text-transparent"
-      />
       <nav className="flex items-center justify-between">
         <ul className="flex flex-wrap">
           {links.map((item, index) => (
@@ -40,12 +31,7 @@ export default function Navbar() {
             </li>
           ))}
           {path === "/profile" && (
-            <motion.li
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 1 }}
-            >
+            <li>
               <a
                 href="/resume.pdf"
                 download
@@ -53,7 +39,7 @@ export default function Navbar() {
               >
                 Download Resume
               </a>
-            </motion.li>
+            </li>
           )}
         </ul>
       </nav>
