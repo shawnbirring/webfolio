@@ -1,48 +1,50 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link as ScrollLink } from "react-scroll";
+import { Roboto_Condensed } from "next/font/google";
+
+const font = Roboto_Condensed({
+  weight: "700",
+  subsets: ["latin"],
+});
 
 const links = [
-  { label: "Home", link: "/" },
-  { label: "Contact", link: "/" },
-  { label: "Projects", link: "/" },
-  { label: "Profile", link: "/" },
+  // { label: "Profile", link: "profile" },
+  { label: "Projects", link: "projects" },
+  { label: "Contact", link: "contact" },
 ];
 
 export default function Navbar() {
-  const path = usePathname();
-
   return (
-    <div className="ml-5 mt-2 lg:ml-20 lg:mt-20">
+    <section
+      className={`relative mx-auto max-w-5xl px-6 py-10 sm:px-16 sm:py-16 ${font.className}`}
+    >
       <nav className="flex items-center justify-between">
         <ul className="flex flex-wrap">
           {links.map((item, index) => (
             <li key={index} className="mr-4">
-              <Link
-                href={item.link}
-                className={`py-1 pr-2 text-xl ${
-                  path === item.link
-                    ? "underline underline-offset-8"
-                    : "text-gray-500 hover:text-white hover:underline hover:underline-offset-8"
-                }`}
+              <ScrollLink
+                to={item.link}
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="py-1 pr-2 hover:text-white hover:underline hover:underline-offset-8"
               >
                 {item.label}
-              </Link>
+              </ScrollLink>
             </li>
           ))}
-          {path === "/profile" && (
-            <li>
-              <a
-                href="/resume.pdf"
-                download
-                className="rounded bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-600 bg-clip-text text-xl font-bold text-transparent"
-              >
-                Download Resume
-              </a>
-            </li>
-          )}
+          {/* 
+          <li>
+            <a
+              href="/resume.pdf"
+              download
+              className="rounded bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-600 bg-clip-text text-xl font-bold text-transparent"
+            >
+              Download Resume
+            </a>
+          </li> */}
         </ul>
       </nav>
-    </div>
+    </section>
   );
 }

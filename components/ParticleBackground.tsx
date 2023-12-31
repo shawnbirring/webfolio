@@ -45,8 +45,8 @@ export default function ParticleBackground() {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      particleSystem.rotation.x += 0.0005;
-      particleSystem.rotation.y += 0.0005;
+      particleSystem.rotation.x -= 0.001;
+      particleSystem.rotation.y -= 0.0009;
 
       renderer.render(scene, camera);
     };
@@ -68,5 +68,10 @@ export default function ParticleBackground() {
         ?.removeChild(renderer.domElement);
     };
   }, []);
-  return <div id="particleBackground" className="fixed top-0 left-0 w-full h-full z-[-1]"/>;
+  return (
+    <div
+      id="particleBackground"
+      className="z-1 fixed left-0 top-0 h-full w-full"
+    />
+  );
 }

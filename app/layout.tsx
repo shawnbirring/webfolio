@@ -1,10 +1,9 @@
 import "./globals.css";
-import { Inconsolata } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "@/components/Navbar";
-import ParticleBackground from "@/components/ParticleBackground";
+import { Roboto_Condensed } from "next/font/google";
 
-const inconsolata = Inconsolata({
+const font = Roboto_Condensed({
   weight: "400",
   subsets: ["latin"],
 });
@@ -21,11 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <body className="bg-gray-900"> */}
-      <body className="relative text-white">
-        <ParticleBackground />
+      <body className={`m-0 bg-black p-0 text-white ${font.className}`}>
         <Navbar />
-        <div className="relative z-10">{children}</div>
+        {children}
         <Analytics />
       </body>
     </html>
