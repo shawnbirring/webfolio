@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import TypeAnimation from "@/components/TypingAnimation";
 
 export default function Contact() {
   return (
@@ -25,7 +24,7 @@ export default function Contact() {
             href="mailto:sbirring4@my.bcit.ca"
             className="underline hover:text-purple-600"
           >
-            <TypeAnimation sequence={["sbirring4@my.bcit.ca"]} cursor={false} />
+            sbirring4@my.bcit.ca
           </Link>
         </p>
         <p>
@@ -34,10 +33,7 @@ export default function Contact() {
             href="mailto:shawnbirring21@gmail.com"
             className="underline hover:text-purple-600"
           >
-            <TypeAnimation
-              sequence={["shawnbirring21@gmail.com"]}
-              cursor={false}
-            />
+            shawnbirring21@gmail.com
           </Link>
         </p>
         <p>
