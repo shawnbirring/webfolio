@@ -11,7 +11,7 @@ export function Project(project: any) {
   return (
     <MotionDiv
       whileHover={{ scale: 1.05 }}
-      className="my-5 mr-5 flex max-w-xs flex-col rounded-xl px-4 py-6"
+      className="my-5 mr-5 flex max-w-xs flex-col rounded-xl py-6 pr-4"
       onClick={() => window.open(project.link, "_blank")}
     >
       <Image
