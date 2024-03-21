@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import Section from "../Section";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="relative mx-auto flex max-w-5xl flex-col px-6 py-10 sm:px-16 sm:py-16"
-    >
+    <Section id="contact">
       <Image
         src="/FaceShot.png"
         alt="Profile picture"
@@ -55,6 +53,6 @@ export default function Contact() {
           </Link>
         </p>
       </div>
-    </section>
+    </Section>
   );
 }

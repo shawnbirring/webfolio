@@ -1,11 +1,6 @@
 "use client";
 import { Link as ScrollLink } from "react-scroll";
-import { Roboto_Condensed } from "next/font/google";
-
-const font = Roboto_Condensed({
-  weight: "700",
-  subsets: ["latin"],
-});
+import Section from "./Section";
 
 const links = [
   // { label: "Profile", link: "profile" },
@@ -15,9 +10,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <section
-      className={`relative mx-auto max-w-5xl px-6 py-10 sm:px-16 sm:py-16 ${font.className}`}
-    >
+    <Section id="navbar">
       <nav className="flex items-center justify-between">
         <ul className="flex flex-wrap">
           {links.map((item, index) => (
@@ -27,7 +20,7 @@ export default function Navbar() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="py-1 pr-2 hover:text-white hover:underline hover:underline-offset-8"
+                className="py-1 pr-2 hover:underline hover:underline-offset-8"
               >
                 {item.label}
               </ScrollLink>
@@ -45,6 +38,6 @@ export default function Navbar() {
           </li> */}
         </ul>
       </nav>
-    </section>
+    </Section>
   );
 }

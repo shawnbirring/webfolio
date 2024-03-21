@@ -2,6 +2,7 @@
 import Image from "next/image";
 import MotionDiv from "@/components/MotionDiv";
 import { Roboto_Condensed } from "next/font/google";
+import Section from "../Section";
 const title = Roboto_Condensed({
   weight: "700",
   subsets: ["latin"],
@@ -24,10 +25,10 @@ export function Project(project: any) {
       <h1 className={`my-2 text-xl font-bold ${title.className}`}>
         {project.name}
       </h1>
-      <p className="mb-2 overflow-hidden overflow-ellipsis text-gray-300">
+      <p className="mb-2 overflow-hidden overflow-ellipsis text-gray-700">
         {project.description}
       </p>
-      <p className="mb-2 text-gray-300">{project.technologies}</p>
+      <p className="mb-2 text-gray-700">{project.technologies}</p>
     </MotionDiv>
   );
 }
@@ -69,10 +70,7 @@ export default function Projects() {
   ];
 
   return (
-    <section
-      id="projects"
-      className="relative mx-auto max-w-5xl px-6 py-10 sm:px-16 sm:py-16"
-    >
+    <Section id="projects">
       <div className="">
         <h1 className="text-4xl font-bold">Projects</h1>
         <h2>
@@ -84,6 +82,6 @@ export default function Projects() {
           <Project key={project.name} {...project} />
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

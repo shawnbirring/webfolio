@@ -1,20 +1,21 @@
 import TypingAnimation from "./TypingAnimation";
+import Section from "./Section";
 
 export default function Welcome() {
   return (
-    <section className="relative mx-auto max-w-5xl px-6 py-10 sm:px-16 sm:py-16">
+    <Section id="welcome">
       <TypingAnimation
         sequence={[
           "Hi, I'm Shawn Birring",
-          1000,
+          400,
           "Welcome to my personal website!",
-          1000,
+          400,
         ]}
         wrapper="h1"
         repeat={Infinity}
         speed={50}
         className="text-4xl font-bold"
       ></TypingAnimation>
-    </section>
+    </Section>
   );
 }
